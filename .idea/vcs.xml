@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BeanInitialization" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BeanLifeCycleDemo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BeanScopeDemo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CircularDependency" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CoreDemo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SpringCoreDemo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/practiceCD" vcs="Git" />
+  </component>
+</project>
