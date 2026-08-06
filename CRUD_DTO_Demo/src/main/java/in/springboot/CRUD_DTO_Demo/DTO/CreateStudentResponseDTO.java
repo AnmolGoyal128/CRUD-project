@@ -2,7 +2,8 @@ package in.springboot.CRUD_DTO_Demo.DTO;
 
 import java.time.LocalDateTime;
 
-public class StudentResponseDTO {
+public class CreateStudentResponseDTO {
+    private Long id;
     private String name;
     private String email;
     private String Subject;
@@ -74,5 +75,13 @@ public class StudentResponseDTO {
 
     public void setUpdatedDate(LocalDateTime updatedDate) {
         this.updatedDate = updatedDate;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

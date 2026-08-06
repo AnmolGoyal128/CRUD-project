@@ -1,11 +1,23 @@
 package in.springboot.CRUD_DTO_Demo.DTO;
 
-public class StudentRequestDTO {
+import jakarta.validation.constraints.*;
+
+public class CreateStudentRequestDTO {
+    @NotBlank(message = "Name can not be Null/Empty or blank")
+    @Size(min = 2, max = 50, message = "Student name must be 2 to 50 character long")
     private String name;
+
+    @NotBlank(message = "Student Email Cannot be blank")
+    @Email(message = "Email must be valid")
     private String email;
+
     private String Subject;
+    @NotNull(message = "Age is required")
+    @Min(value = 18, message = "Student Must Be atleast 18 years old" )
     private int age;
+
     private int mobileNo;
+    @NotNull(message = "RollNo is required")
     private Long rollNo;
 
     public String getName() {

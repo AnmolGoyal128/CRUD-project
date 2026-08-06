@@ -2,13 +2,21 @@ package in.springboot.CRUD_DTO_Demo.DTO;
 
 import java.time.LocalDateTime;
 
-public class ExceptionDto {
+public class ExceptionResponseDto {
 
     private LocalDateTime timestamp;
     private int statusCode;
     private String error;
     private String message;
     private String path;
+
+    public ExceptionResponseDto(LocalDateTime timestamp, int statusCode, String error, String message, String path) {
+        this.timestamp = timestamp;
+        this.statusCode = statusCode;
+        this.error = error;
+        this.message = message;
+        this.path = path;
+    }
 
     public LocalDateTime getTimestamp() {
         return timestamp;
