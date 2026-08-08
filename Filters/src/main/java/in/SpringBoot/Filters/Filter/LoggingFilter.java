@@ -3,12 +3,14 @@ package in.SpringBoot.Filters.Filter;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.util.UUID;
 
-//@Component
+@Component
+@Order(1)
 public class LoggingFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request,

@@ -3,11 +3,16 @@ package in.SpringBoot.Filters.Filter;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
 @Component
+@Order(4)
+
+//ContentCacheResponseWrapper
+
 public class AuthenticationFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request,
@@ -31,7 +36,7 @@ public class AuthenticationFilter implements Filter {
             httpServletResponse.setContentType("application/json");
             httpServletResponse.getWriter().write(
                     "{\n"+
-                            "   \"status\":\"Invalid or missing Api key\"\n"+
+                            "   \"message\":\"Invalid or missing Api key\"\n"+
                     "}"
             );
 
@@ -44,6 +49,8 @@ public class AuthenticationFilter implements Filter {
         }
 
         chain.doFilter(httpServletRequest, httpServletResponse);
+
+        // we can not change body here during coming
     }
 
 }
